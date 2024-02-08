@@ -2,6 +2,18 @@
 
 const lengthOfLastWord = function (s) {
   //Start coding here
+  // Remove trailing spaces
+  const wordArray = s.trim().split(/(\s+)/);
+
+  // Split the string into words using space as the separator
+  const last = wordArray.length - 1;
+
+  // Return the length of the last word
+  if (wordArray[last] === "") {
+    return 0;
+  } else {
+    return wordArray[last].length;
+  }
 };
 
 const result1 = lengthOfLastWord("Hello World");

@@ -2,6 +2,12 @@
 
 const singleNumber = function (nums) {
   // Start coding here
+  let sorted = nums.sort();
+  for (let i = 0; i < sorted.length; i++) {
+    if (sorted[i - 1] !== sorted[i] && sorted[i + 1] !== sorted[i]) {
+      return sorted[i];
+    }
+  }
 };
 
 const result1 = singleNumber([2, 2, 1]);
